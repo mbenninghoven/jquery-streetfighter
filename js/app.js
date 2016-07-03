@@ -30,6 +30,17 @@ $(document).ready(function() {
     $('.ryu-throwing').hide();
 
   		});
+
+//Having a hard time getting the x key down to function:
+  	/*$('.main').keydown(function(e) {
+		if(e.keyCode==88){
+			alert("Handler for keydown called");
+			$('.ryu-ready').hide();
+			$('.ryu-still').hide();
+			$('.ryu-throwing').hide();
+			$('.ryu-cool').show();	
+		}
+			});*/
 	});
 	  
 	function playHadouken () {
