@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
-  })
+  		})
   .mouseleave(function() {
   	$('.ryu-still').show();
     $('.ryu-ready').hide();
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   })
   .mouseup(function() {
-    console.log('mouseup');
+    //console.log('mouseup');
     // ryu goes back to his ready position
     $('.ryu-ready').show();
     $('.ryu-throwing').hide();
@@ -32,15 +32,20 @@ $(document).ready(function() {
   		});
 
 //Having a hard time getting the x key down to function:
-  	/*$('.main').keydown(function(e) {
-		if(e.keyCode==88){
-			alert("Handler for keydown called");
-			$('.ryu-ready').hide();
+  	$(document).keydown(function(e) {
+		if (e.keyCode == 88){
+			//$('.ryu-still').hide();
 			$('.ryu-still').hide();
-			$('.ryu-throwing').hide();
 			$('.ryu-cool').show();	
 		}
-			});*/
+			})
+  			.keyup(function(e){
+  		if (e.keyCode == 88){
+  		//$('.ryu-still').show();
+  		$('.ryu-still').show();
+  		$('.ryu-cool').hide();
+  		}
+  			});
 	});
 	  
 	function playHadouken () {
